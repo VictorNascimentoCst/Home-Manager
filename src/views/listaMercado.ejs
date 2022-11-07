@@ -1,0 +1,10 @@
+<%- include('../components/header', {title: 'Home Manager'}) %>
+<%- include('../components/menu') %>
+
+<div class='ListaMercado'>
+    <h1>Lista Mercado</h1>
+    <%- include('../components/formMercado', {url: '/listamercado?_method=post'}) %>
+
+    <%- include('../components/listMercado' , {listamercado: listamercado}) %>   
+</div>
+<%- include('../components/footer') %>

@@ -1,0 +1,30 @@
+<div class='container_listEconomia'>
+    <div class='titles_economia'>
+        <h3>Mês</h3>
+        <h3>Saldo</h3>
+        <h3>Saldo Total</h3>
+    </div>
+
+    <% if (economia) { %>
+    <% var tot = 0 %>
+    <% economia.forEach(economia=> { %>
+    
+        
+        <div class="row_economia">
+            <p>
+                <%= economia.mes %>
+            </p>
+            <p>
+                <%= economia.saldo %>
+            </p>
+            <%  tot += economia.saldo %>
+           
+            <p class="txt_icon"><%= tot %><a href="/economia/<%= economia._id %>?_method=delete"><img class="icon"
+                        src="../../public/img/trash-bin.png" /></a></p>
+
+        </div>
+        <% return tot %>
+        <% }) %>
+        <% } %>
+
+</div>

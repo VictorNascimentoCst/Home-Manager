@@ -1,0 +1,14 @@
+<%- include('../components/header', {title: 'Home Manager' }) %>
+    <%- include('../components/menu') %>
+
+        <div class='container_gastosFixos'>
+            <h1>Gastos Fixos</h1>
+
+            <%- include('../components/formGastosFixos', {url: '/gastosfixos?_method=post' }) %>
+
+            <%- include('../components/boxesGastosFixos', {gastosfixos:gastosfixos}) %>
+
+           
+        </div>
+
+        <%- include('../components/footer') %>

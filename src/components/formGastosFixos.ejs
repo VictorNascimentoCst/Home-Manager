@@ -1,0 +1,18 @@
+<div class="main_container">
+
+        <form method="post" action="<%= url %>"  class="container_inputs">
+            <div>
+                <div class='container'>
+                    <label For="name">Nome:</label>
+                    <input required  name="gastosfixos[nome]" id="name" class="input"></input>
+                </div>
+                <div class='container'>
+                    <label For="cost">Custo:</label>
+                    <input required type="number"  name="gastosfixos[custo]" id="cost" class="input" step=".01"></input>
+                </div>
+            </div>
+
+            <Button type="submit" class="button">Cadastrar</Button>
+        </form>
+
+    </div>

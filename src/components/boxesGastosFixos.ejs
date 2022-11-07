@@ -1,0 +1,32 @@
+<div class='Maincontainer_boxes'>
+
+    <div class='container_boxes'>
+
+        <%gastosfixos.forEach(gastosfixos=> { %>
+            <div class='box'>
+                <h2>
+                    <%= gastosfixos.nome %>
+                </h2>
+                <p>R$: <%=gastosfixos.custo%>
+                </p>
+                <div class="delete_icon">
+                    <a href="/gastosfixos/<%= gastosfixos._id %>?_method=delete">
+                        <img class="icon" src="../../public/img/trash-bin.png" />
+                    </a>
+                </div>
+            </div>
+
+            <% }) %>
+            
+    </div>
+
+    <% if(gastosfixos.length < 1) { %>
+        <p class="totalGasto">Nada Registrado </p> 
+    <% } else  {  %>    
+        <% var tot= 0 %>
+        <%gastosfixos.forEach(gastosfixos=> { %>
+        <% return tot += gastosfixos.custo }) %>
+        <p class="totalGasto">Total R$: <%= tot %> </p> 
+    <% } %>
+
+</div>

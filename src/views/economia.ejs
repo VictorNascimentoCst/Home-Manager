@@ -1,0 +1,16 @@
+<%- include('../components/header', {title: 'Home Manager' }) %>
+    <%- include('../components/menu') %>
+        <div class=economias_containerPrincipal>
+            <div class=economias_container>
+                <h1>Economias</h1>
+
+                <div class="main_container">
+
+                    <%- include('../components/formEconomia', {url: '/economia?_method=post' }) %>
+                </div>
+
+                <%- include('../components/listEconomia', {economia:economia }) %>
+            </div>
+        </div>
+
+        <%- include('../components/footer') %>

@@ -1,0 +1,28 @@
+<%- include('../components/header', {title: 'Home Manager'}) %>
+<%- include('../components/menu') %>
+
+<div class="home_containerPrincipal">
+    <%- include('../components/about') %>
+    <div class="home_boxes">
+        <%- include('../components/toDoList', {url: '/home?_method=post'}) %>
+        
+        <div class="containerList">
+            <% todolist.forEach(todolist => { %>
+            <div class='container_row'>
+                
+                <div class='status'>
+                    <input type='checkbox' />
+                </div>
+                
+                <div class='tarefas'>
+                    <p><%= todolist.tarefa %></p>
+                   <a href="/home/<%= todolist._id %>?_method=delete"><img  class="icon" src="../../public/img/trash-bin.png"/></a>
+                </div>
+               
+            </div>
+            <% }) %>
+        </div>
+    
+    </div>
+</div>
+<%- include('../components/footer') %>

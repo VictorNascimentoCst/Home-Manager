@@ -1,0 +1,2 @@
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/homeManager').then(() => console.log("Conectado ao Banco de dados homeManager")).catch((err) => console.log(`ERRO AO CONECTAR AO BANCO DE DADOS${err}`))
